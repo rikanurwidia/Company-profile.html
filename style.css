@@ -1,0 +1,519 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background-color: #090909;
+    color: #333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar di bagian atas */
+.fantasy-navbar {
+    background-color: rgba(23, 20, 20, 0.9);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.fantasy-navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.fantasy-navbar li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.fantasy-navbar a {
+    color: #FFD700; /* Gold color for a fantasy theme */
+    font-size: 1.2rem; /* Slightly larger font size */
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif; /* Font tema fantasi */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fantasy-navbar a:hover {
+    background-color: #fefefc; /* Change background on hover */
+    color: #333;
+}
+
+/* Header dengan Background Fantasi */
+.natural-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 50, 0.7)), url('bg/P6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fbf7f7;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    margin-top: 60px; /* Adjusted for navbar height */
+}
+
+.natural-header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.natural-header p {
+    font-size: 1.5rem;
+}
+
+.content-container {
+    background-color: white; /* Latar belakang putih */
+    padding: 40px; /* Ruang di dalam kontainer */
+    border-radius: 10px; /* Sudut yang membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+    text-align: center; /* Rata tengah teks */
+    margin: 20px; /* Ruang luar kontainer */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Main Content Section dengan Latar Belakang */
+.natural-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 50, 0.4), rgba(0, 0, 80, 0.5)), url('bg/P6.jpg');
+    background-size: cover;
+    padding: 40px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.natural-section .intro-text {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+.natural-section h2 {
+    font-size: 2.5rem;
+}
+
+.natural-section p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.btn-natural {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-natural:hover {
+    background-color: #FFD700;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Products and Services Section dengan Background */
+.products-section {
+    padding: 50px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(253, 251, 251, 0.8), rgba(3, 99, 139, 0.9)), url('bg/P6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensure background stays fixed */
+    min-height: 50vh; /* Full viewport height */
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 40px 0 20px;
+    position: relative;
+    font-family: 'Cinzel', serif;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffeb3b;
+    background: rgba(24, 24, 107, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    font-family: 'Cinzel', serif;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.product-card p {
+    margin-top: 10px;
+    color: #777;
+}
+
+/* Jasa Section */
+.services-section {
+    padding: 50px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url('bg/P4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensure background stays fixed */
+    min-height: 50vh; /* Full viewport height */
+}
+
+.services1-section {
+    padding: 50px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(26, 25, 25, 0.8), rgba(255, 255, 255, 0.9)), url('bg/P7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensure background stays fixed */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 300px; /* Fixed width for all service cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Elevates card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.service-image {
+    width: 100%; /* Full width for images */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Covers the area without distorting the image */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.service-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem; /* Slightly larger font for titles */
+}
+
+.service-card p {
+    margin-top: 10px;
+    color: #777; /* Color for description text */
+}
+
+
+/* Gallery Section dengan Background */
+.gallery-section {
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(9, 9, 9, 0.5), rgba(0, 0, 0, 0.5)), url('bg/P8.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-attachment: fixed; /* Ensure background stays fixed */
+    min-height: 65vh; /* Full viewport height */
+    color: #fff;
+}
+
+.gallery1-section {
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(9, 9, 9, 0.5), rgba(0, 0, 0, 0.5)), url('bg/P8.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-attachment: fixed; /* Ensure background stays fixed */
+    min-height: 100vh; /* Full viewport height */
+    color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+} 
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.natural-footer {
+    background: #2f4f4f;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.natural-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 360px; /* Tinggi sesuai rasio banner */
+    overflow: hidden;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Mulai tidak terlihat */
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide-image.active {
+    opacity: 1; /* Gambar aktif terlihat */
+}
+
+/*tentang*/
+.about-section {
+    background-image: url('bg/p1.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Takes full viewport height */
+    display: flex; /* Centers content vertically and horizontally */
+    flex-direction: column; /* Makes the content flow top to bottom */
+    justify-content: top; /* Centers content vertically */
+    align-items: top; /* Centers content horizontally */
+    padding: 60px 20px; /* Adjusted padding for more space */
+    background-attachment: fixed; /* Ensure background stays fixed */
+    position: relative;
+    z-index: 1;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.about-container {
+    position: relative;
+    z-index: 2; /* Ensures content is on top of the overlay */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the content */
+    text-align: center;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 3em; /* Larger and more prominent title */
+    font-family: 'Cinzel', serif; /* Classy serif font for the title */
+    color: #ffffff;
+    margin-bottom: 40px;
+    padding-top: 30px; /* Added padding for top alignment */
+    margin-top: 0; /* Reset top margin */
+}
+
+/* Grid Layout for the Team Cards */
+.about-grid {
+    display: flex;
+    justify-content: center; /* Center the grid items */
+    gap: 40px; /* Space between the profile cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* About Card Styling */
+.about-card {
+    background-color: white;
+    border: 3px solid #4CAF50; /* Border for card */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+    width: 250px; /* Fixed width */
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Profile Image Styling */
+.about-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #4CAF50; /* Border for profile image */
+}
+
+/* Name Styling */
+.about-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Social Media Icons Styling */
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media a {
+    font-size: 26px; /* Larger icons */
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4CAF50; /* Green color for social media icons */
+    transition: transform 0.3s;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Styling */
+.natural-footer {
+    background-color: #011821;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 0; /* Ensure no gap above the footer */
+}
+
+/* Adjusting for Smaller Screens */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2em; /* Smaller font size on mobile */
+    }
+
+    .about-grid {
+        flex-direction: column; /* Stack the profile cards vertically */
+    }
+
+    .about-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.about-section.fade-in-element,
+.gallery-section.fade-in-element,
+.services-section.fade-in-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-section.visible,
+.gallery-section.visible,
+.services-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
