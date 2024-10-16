@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <title>Foto Kreatif Nuansa Artistic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="natural-header">
+        <div class="frame">
+            <h1>Foto Kreatif Nuansa Artistic</h1>
+            <p>Jelajahi Keindahan Alam dalam Setiap Momen Dengan Menggunakan jasa Kami dan Memiliki Peralatan yang Mendukung</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="fantasy-navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="services.html">Layanan</a></li>
+            <li><a href="products.html">Produk</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-section">
+        <div class="slideshow-container">
+            <img src="bg/p9.jpg" class="slide-image fade" alt="Slide 1">
+            <img src="bg/P10.jpg" class="slide-image fade" alt="Slide 2">
+            <img src="bg/P11.jpg" class="slide-image fade" alt="Slide 3">
+        </div>
+    </div>
+    
+    <!-- Main Content Section -->
+    <section class="natural-section">
+        <div class="intro-text">
+            <h2>Abadikan Momen Alam, Ciptakan Kenangan Abadi</h2>
+            <p>Kami menghadirkan peralatan fotografi berkualitas tinggi dan jasa pemotretan profesional untuk Anda yang ingin menangkap keindahan alam dan segala keajaibannya.</p>
+            <a href="products.html" class="btn-natural">Lihat Produk Kami</a>
+        </div>
+    </section>
+
+    <!-- Products and Services Section -->
+    <section class="products-section">
+        <h2 class="section-title">Produk dan Layanan Unggulan</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="bg/p1.jpg" alt="Produk 1" class="product-image">
+                <h3>Produk 1</h3>
+                <p>Coming Soon.</p>
+            </div>
+            <div class="product-card">
+                <img src="bg/p1.jpg" alt="Produk 2" class="product-image">
+                <h3>Produk 2</h3>
+                <p>Coming Soon.</p>
+            </div>
+            <div class="product-card">
+                <img src="bg/p1.jpg" alt="Produk 3" class="product-image">
+                <h3>Produk 3</h3>
+                <p>Coming Soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2 class="section-title">Galeri Keindahan Alam</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="bg/p1.jpg" alt="Galeri 1" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="bg/P7.jpg" alt="Galeri 2" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="bg/P8.jpg" alt="Galeri 3" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="bg/P5.jpg" alt="Galeri 4" class="gallery-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="natural-footer">
+        <p>&copy; 2024 Foto Kreatif Nuansa Artistic. Keajaiban Alam dalam Genggaman Anda.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-image');
+        const totalSlides = slides.length;
+
+        function showSlides() {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            
+            slideIndex++;
+            if (slideIndex > totalSlides) {
+                slideIndex = 1;
+            }
+            
+            slides[slideIndex - 1].classList.add('active');
+            setTimeout(showSlides, 5000);
+        }
+
+        slides[0].classList.add('active');
+        showSlides();
+            
+    </script>
+</body>
+</html>
